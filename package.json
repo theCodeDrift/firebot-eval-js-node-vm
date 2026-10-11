@@ -1,0 +1,37 @@
+{
+  "name": "firebot-eval-js-node-vm",
+  "version": "1.0.0",
+  "description": "A Firebot Evaluate JavaScript effect that runs in node:vm instead of a browser window per run.",
+  "license": "MIT",
+  "author": "Jakob Heuser",
+  "repository": "github:theCodeDrift/firebot-eval-js-node-vm",
+  "type": "module",
+  "exports": {
+    "./engine": "./src/engine.ts"
+  },
+  "files": [
+    "src/engine.ts"
+  ],
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@crowbartools/firebot-custom-scripts-types": "^5.65.1",
+    "@types/node": "^25.3.0",
+    "esbuild": "^0.28.1",
+    "prettier": "^3.8.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.10"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

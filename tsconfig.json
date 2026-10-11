@@ -1,0 +1,18 @@
+{
+  // verbatimModuleSyntax stays off: @crowbartools/firebot-custom-scripts-types
+  // ships a raw .ts file (types/modules/http-server-manager.ts) with value
+  // imports of types, which that option rejects and skipLibCheck doesn't cover.
+  "include": ["src", "scripts"],
+  "compilerOptions": {
+    "lib": ["ES2022"],
+    "types": ["node"],
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true
+  }
+}
